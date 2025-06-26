@@ -1,0 +1,18 @@
+Front,Back
+What is a NestJS Module?,A class annotated with @Module() that groups together controllers and providers.
+What does the @Controller() decorator do?,Defines a class as a controller to handle incoming HTTP requests.
+What does the @Injectable() decorator do?,Marks a class as a provider that can be injected via Nest's DI.
+Where do you register services and controllers in a module?,In the @Module's providers and controllers arrays.
+What is dependency injection in NestJS?,A pattern where services are automatically provided to classes.
+How do you inject a service into a controller?,Include it in the controller’s constructor: constructor(private service: MyService) {}
+What decorator is used to define a GET route?,@Get()
+How do you extract a route parameter?,@Param('id') id: string in a route like @Get(':id')
+How do you access the request body in a POST route?,Use @Body(): create(@Body() body: any) {}
+What is a DTO?,A class that defines the shape and structure of request data.
+Why use DTOs?,"For type safety, validation, and clearer request structure."
+Which package is used for validation in NestJS?,class-validator
+How do you enable validation globally?,In main.ts: app.useGlobalPipes(new ValidationPipe());
+How do you add validation to a DTO field?,Use decorators like @IsString() or @IsNumber().
+What is a Pipe in NestJS?,A class that transforms or validates incoming data.
+What built-in pipe converts a param to a number?,ParseIntPipe
+How do you use a pipe in a route handler?,"@Param('id', ParseIntPipe) id: number"
